@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+
+# Editör
+.vscode/
+.idea/
+
+# Bağımlılıklar / derleme
+node_modules/
+
+# Ham kaynak görseller (repoya dahil edilmez)
+WhatsApp Image*.jpeg

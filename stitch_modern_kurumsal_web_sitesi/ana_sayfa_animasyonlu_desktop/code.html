@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VK Oto Çözüm - Profesyonel Oto Servis</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Roboto+Flex:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#393939",
+                    "on-secondary-fixed-variant": "#5b4300",
+                    "on-primary-fixed": "#410002",
+                    "primary": "#ffb4ac",
+                    "outline-variant": "#5b403d",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "inverse-surface": "#e5e2e1",
+                    "on-primary": "#690006",
+                    "surface-container-highest": "#353534",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary-container": "#282a2a",
+                    "on-secondary-fixed": "#261a00",
+                    "secondary": "#ffdf9e",
+                    "on-secondary": "#3f2e00",
+                    "on-surface": "#e5e2e1",
+                    "error-container": "#93000a",
+                    "background": "#131313",
+                    "surface-dim": "#131313",
+                    "tertiary-fixed": "#e2e2e2",
+                    "tertiary-container": "#909191",
+                    "surface-container-low": "#1c1b1b",
+                    "surface": "#131313",
+                    "secondary-container": "#fabd00",
+                    "outline": "#ab8985",
+                    "primary-container": "#ff544c",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed": "#ffdad6",
+                    "error": "#ffb4ab",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "on-error-container": "#ffdad6",
+                    "on-surface-variant": "#e4beb9",
+                    "surface-container": "#201f1f",
+                    "on-error": "#690005",
+                    "surface-tint": "#ffb4ac",
+                    "secondary-fixed": "#ffdf9e",
+                    "surface-variant": "#353534",
+                    "tertiary": "#c6c6c7",
+                    "on-secondary-container": "#6a4e00",
+                    "secondary-fixed-dim": "#fabd00",
+                    "on-tertiary": "#2f3131",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-primary-fixed-variant": "#93000d",
+                    "on-primary-container": "#5c0005",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "inverse-primary": "#bb171c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "section-gap": "80px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Roboto Flex"],
+                    "display-lg": ["Oswald"],
+                    "label-bold": ["Oswald"],
+                    "headline-lg": ["Oswald"],
+                    "title-md": ["Oswald"],
+                    "headline-lg-mobile": ["Oswald"],
+                    "body-md": ["Roboto Flex"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-slow': 'pulseSlow 3s infinite',
+              'beam': 'beam 10s linear infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              pulseSlow: {
+                '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(250,189,0, 0.4)' },
+                '50%': { transform: 'scale(1.05)', boxShadow: '0 0 20px 5px rgba(250,189,0, 0.2)' },
+              },
+              beam: {
+                '0%': { transform: 'translateX(-100%) rotate(-45deg)' },
+                '100%': { transform: 'translateX(200%) rotate(-45deg)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-bg-anim {
+            background-size: 110% auto;
+            animation: float 20s ease-in-out infinite alternate;
+        }
+        
+        .light-beam {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,180,172,0.05), transparent);
+            transform-origin: top left;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pt-20 overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-surface-container-highest dark:border-surface-container-highest bg-background/95 backdrop-blur-sm transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
+<a class="font-display-lg text-display-lg font-bold tracking-tighter text-primary dark:text-primary leading-none uppercase hover:opacity-80 transition-opacity" href="#">
+                AUTO EXPERT
+            </a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-primary dark:text-primary font-bold border-b-2 border-primary pb-1 font-label-bold text-label-bold hover:text-secondary-container transition-colors duration-200 relative group" href="#">
+                Ana Sayfa
+            </a>
+<a class="text-on-surface dark:text-on-surface font-medium font-label-bold text-label-bold hover:text-secondary-container transition-colors duration-200 relative group pb-1" href="#">
+                Hizmetler
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-container transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a class="text-on-surface dark:text-on-surface font-medium font-label-bold text-label-bold hover:text-secondary-container transition-colors duration-200 relative group pb-1" href="#">
+                İletişim
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-container transition-all duration-300 group-hover:w-full"></span>
+</a>
+</div>
+<button class="hidden md:flex bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 rounded uppercase hover:bg-primary-container hover:scale-105 hover:brightness-110 active:scale-95 transition-all shadow-sm">
+                Randevu Al
+            </button>
+<button class="md:hidden text-primary p-2 hover:bg-surface-variant rounded-full transition-colors">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full min-h-[870px] flex items-center bg-surface-container overflow-hidden" data-alt="A highly detailed shot of a modern high-performance sports car inside an industrial, premium automotive garage. The scene is set in a dark mode aesthetic with moody, cinematic lighting cutting through the shadows. Strong primary red accent lights illuminate the diagnostic bays and high-tech tools in the background. The atmosphere is professional, authoritative, and technologically advanced.">
+<!-- Animated Background Image -->
+<div class="absolute inset-0 hero-bg-anim" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBSkzYUkWpQ4XeAXDkJH44KStMWOKz4oQeW6Nv2M_xFpWnqBCiuRkUm9DdfZm27BGH3fkVDkMMo7attDVdH4VYYZ0JVQaexj2eVViUy9RrPtIpW0Wnjs07yUotrAluscfZp83xdW7TV7V3W0kjaau0zxVqQGDTqDmHHgNKZFItoJgEtC_MTs7mEI2-E6Tvoi_E6InymiCh6VWbpQLkswpYrnhsDDt-pi-WlKsFLip0YtK5AecnpcrJzR4TBPziw2lMpedXUlZA44Kgg'); background-position: center;"></div>
+<!-- Overlay -->
+<div class="absolute inset-0 bg-background/80 bg-gradient-to-r from-background via-background/90 to-transparent"></div>
+<!-- Animated Light Beam -->
+<div class="light-beam animate-beam"></div>
+<div class="relative z-10 w-full max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="col-span-1 lg:col-span-7 flex flex-col items-start gap-6">
+<!-- Badge -->
+<div class="inline-flex items-center gap-2 bg-secondary-container/10 border border-secondary px-3 py-1.5 rounded text-secondary font-label-bold text-label-bold shadow-[0_0_10px_rgba(250,189,0,0.1)] opacity-0 animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                    %100 Müşteri Memnuniyeti
+                </div>
+<h1 class="font-display-lg text-display-lg text-on-background uppercase tracking-tight leading-[1.1] opacity-0 animate-[fadeInUp_0.8s_ease-out_0.4s_forwards]">
+                    Profesyonel Oto <br/>
+<span class="text-primary">Performans Çözümleri</span>
+</h1>
+<p class="font-body-lg text-body-lg text-tertiary max-w-xl opacity-0 animate-[fadeInUp_0.8s_ease-out_0.6s_forwards]">
+                    Aracınızın motor yazılımı, DPF, EGR ve AdBlue sistemlerinde kalıcı ve garantili çözümler sunuyoruz. Uzman mühendis kadromuzla gücü ve verimliliği yeniden tanımlayın.
+                </p>
+<div class="flex flex-wrap gap-4 mt-4 w-full sm:w-auto opacity-0 animate-[fadeInUp_0.8s_ease-out_0.8s_forwards]">
+<button class="w-full sm:w-auto bg-primary text-on-primary font-label-bold text-label-bold px-8 py-4 rounded uppercase hover:bg-primary-container hover:scale-105 hover:brightness-110 active:scale-95 hover:shadow-[0_0_20px_rgba(255,180,172,0.4)] transition-all duration-300">
+                        Hizmetleri İncele
+                    </button>
+<button class="w-full sm:w-auto border border-surface-variant text-on-surface font-label-bold text-label-bold px-8 py-4 rounded uppercase hover:border-secondary hover:text-secondary hover:scale-105 hover:bg-surface-variant/50 active:scale-95 transition-all duration-300">
+                        Bizi Arayın
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Services Bento Grid -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
+<div class="mb-12 border-l-4 border-primary pl-4 scroll-reveal">
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-background tracking-tight">Uzmanlık Alanlarımız</h2>
+<p class="font-body-md text-body-md text-tertiary mt-2">Modern otomotiv teknolojileri için endüstriyel standartlarda teknik müdahaleler.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter auto-rows-min">
+<!-- AdBlue Card -->
+<div class="lg:col-span-4 bg-surface-container border border-surface-container-highest p-8 rounded hover:border-primary hover:shadow-[0_0_20px_rgba(255,180,172,0.15)] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden flex flex-col h-full scroll-reveal" style="transition-delay: 100ms;">
+<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-surface-container-high to-transparent opacity-30 pointer-events-none group-hover:scale-150 group-hover:opacity-50 transition-all duration-700"></div>
+<div class="mb-6 inline-flex items-center justify-center w-12 h-12 bg-surface-variant text-primary rounded group-hover:bg-primary group-hover:text-on-primary group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-background uppercase mb-3 group-hover:text-primary transition-colors duration-300">AdBlue Çözümleri</h3>
+<p class="font-body-md text-body-md text-tertiary mb-8 flex-grow">
+                    Sık karşılaşılan SCR ve AdBlue pompa arızalarına karşı kalıcı yazılımsal optimizasyon ve sistem revizyonu.
+                </p>
+<a class="inline-flex items-center text-primary font-label-bold text-label-bold uppercase hover:text-primary-container group-hover:translate-x-2 transition-all w-fit" href="#">
+                    Detayları Gör <span class="material-symbols-outlined ml-2 text-[18px] group-hover:animate-pulse">arrow_forward</span>
+</a>
+</div>
+<!-- DPF Card -->
+<div class="lg:col-span-4 bg-surface-container border border-surface-container-highest p-8 rounded hover:border-primary hover:shadow-[0_0_20px_rgba(255,180,172,0.15)] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden flex flex-col h-full scroll-reveal" style="transition-delay: 200ms;">
+<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-surface-container-high to-transparent opacity-30 pointer-events-none group-hover:scale-150 group-hover:opacity-50 transition-all duration-700"></div>
+<div class="mb-6 inline-flex items-center justify-center w-12 h-12 bg-surface-variant text-primary rounded group-hover:bg-primary group-hover:text-on-primary group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">air</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-background uppercase mb-3 group-hover:text-primary transition-colors duration-300">DPF İptali / Temizliği</h3>
+<p class="font-body-md text-body-md text-tertiary mb-8 flex-grow">
+                    Tıkanmış dizel partikül filtreleri için profesyonel makine ile temizlik veya performansa yönelik yazılımsal iptal işlemleri.
+                </p>
+<a class="inline-flex items-center text-primary font-label-bold text-label-bold uppercase hover:text-primary-container group-hover:translate-x-2 transition-all w-fit" href="#">
+                    Detayları Gör <span class="material-symbols-outlined ml-2 text-[18px] group-hover:animate-pulse">arrow_forward</span>
+</a>
+</div>
+<!-- EGR Card -->
+<div class="lg:col-span-4 bg-surface-container border border-surface-container-highest p-8 rounded hover:border-primary hover:shadow-[0_0_20px_rgba(255,180,172,0.15)] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden flex flex-col h-full scroll-reveal" style="transition-delay: 300ms;">
+<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-surface-container-high to-transparent opacity-30 pointer-events-none group-hover:scale-150 group-hover:opacity-50 transition-all duration-700"></div>
+<div class="mb-6 inline-flex items-center justify-center w-12 h-12 bg-surface-variant text-primary rounded group-hover:bg-primary group-hover:text-on-primary group-hover:scale-110 group-hover:rotate-45 transition-all duration-300">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">settings_input_component</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-background uppercase mb-3 group-hover:text-primary transition-colors duration-300">EGR Çözümleri</h3>
+<p class="font-body-md text-body-md text-tertiary mb-8 flex-grow">
+                    Motor verimliliğini düşüren ve kurum bağlayan EGR valfi arızaları için garantili mekanik ve yazılımsal müdahaleler.
+                </p>
+<a class="inline-flex items-center text-primary font-label-bold text-label-bold uppercase hover:text-primary-container group-hover:translate-x-2 transition-all w-fit" href="#">
+                    Detayları Gör <span class="material-symbols-outlined ml-2 text-[18px] group-hover:animate-pulse">arrow_forward</span>
+</a>
+</div>
+<!-- Mechanical / Wide Card -->
+<div class="lg:col-span-12 bg-surface-container-low border border-surface-container-highest p-8 md:p-12 rounded flex flex-col md:flex-row items-center justify-between gap-8 hover:border-secondary hover:shadow-[0_0_20px_rgba(250,189,0,0.1)] hover:-translate-y-1 transition-all duration-500 group scroll-reveal" style="transition-delay: 400ms;">
+<div class="flex-1 max-w-2xl">
+<div class="inline-flex items-center gap-2 bg-surface-variant px-3 py-1 rounded text-on-surface font-label-bold text-label-bold mb-4 uppercase text-[12px] tracking-wider group-hover:bg-secondary/10 group-hover:text-secondary transition-colors">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                        Premium Servis
+                    </div>
+<h3 class="font-headline-lg text-headline-lg text-on-background uppercase mb-4 group-hover:text-secondary transition-colors duration-300">Genel Mekanik &amp; Periyodik Bakım</h3>
+<p class="font-body-lg text-body-lg text-tertiary">
+                        Sadece yazılım değil, aracınızın yürüyen aksamı ve motor mekaniği konusunda da endüstri standartlarında teşhis ve tamir hizmeti sunuyoruz. Ağır bakımlarınız güvenli ellerde.
+                    </p>
+</div>
+<div class="flex-shrink-0">
+<button class="border-2 border-secondary text-secondary font-label-bold text-label-bold px-8 py-4 rounded uppercase hover:bg-secondary hover:text-on-secondary hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 group-hover:shadow-[0_0_20px_rgba(250,189,0,0.3)]">
+<span class="material-symbols-outlined group-hover:rotate-12 transition-transform">calendar_month</span>
+                        Bakım Randevusu
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- BottomNavBar (WhatsApp FAB) -->
+<div class="fixed bottom-8 right-8 z-50 w-auto">
+<a class="flex items-center gap-3 bg-secondary-container text-on-secondary-container rounded-full p-4 shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 group cursor-pointer animate-pulse-slow" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:animate-bounce">chat</span>
+<span class="hidden md:inline-block font-label-bold text-label-bold pr-2 transition-all">WhatsApp Support</span>
+</a>
+</div>
+<!-- Footer -->
+<footer class="w-full border-t border-surface-container-highest bg-surface-container-lowest mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center py-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-screen-2xl mx-auto gap-8">
+<div class="font-display-lg text-display-lg text-on-surface font-bold tracking-tighter uppercase hover:text-primary transition-colors cursor-pointer">
+                AUTO EXPERT
+            </div>
+<div class="flex flex-wrap justify-center gap-6 md:space-x-8">
+<a class="text-tertiary dark:text-tertiary font-label-bold text-label-bold hover:text-primary hover:-translate-y-1 transition-all uppercase tracking-wider inline-block" href="#">Hizmet Şartları</a>
+<a class="text-tertiary dark:text-tertiary font-label-bold text-label-bold hover:text-primary hover:-translate-y-1 transition-all uppercase tracking-wider inline-block" href="#">Gizlilik Politikası</a>
+<a class="text-tertiary dark:text-tertiary font-label-bold text-label-bold hover:text-primary hover:-translate-y-1 transition-all uppercase tracking-wider inline-block" href="#">SSS</a>
+</div>
+<div class="text-tertiary font-body-md text-body-md">
+                © 2024 AUTO EXPERT Performance. Tüm Hakları Saklıdır.
+            </div>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+</body></html>
