@@ -169,9 +169,9 @@ const photos = [
   { src: "assets/images/dukkan-bmw-on.jpg",       caption: "Atölye – Servis Bekleyen BMW" },
   { src: "assets/images/dukkan-bmw-arka.jpg",     caption: "Atölye İç Görünüm" },
   { src: "assets/images/klima-gazi-vw.jpg",       caption: "Klima Gazı Dolumu – VW" },
-  { src: "assets/images/ekipmanlar-katalog.jpg",  caption: "Profesyonel Ekipmanlarımız" },
-  { src: "assets/images/kartvizit-on.jpg",        caption: "Kartvizit – Hizmetlerimiz" },
-  { src: "assets/images/kartvizit-arka.jpg",      caption: "Kartvizit – Klima & Kalorifer" }
+  { src: "assets/images/ekipmanlar-katalog.jpg",  caption: "" },
+  { src: "assets/images/kartvizit-on.jpg",        caption: "" },
+  { src: "assets/images/kartvizit-arka.jpg",      caption: "" }
 ];
 
 const grid = document.getElementById('gallery-grid');
@@ -179,10 +179,10 @@ photos.forEach((p, i) => {
   const card = document.createElement('button');
   card.className = 'gallery-item group relative block w-full aspect-[4/3] overflow-hidden rounded border border-surface-container-highest bg-surface-container cursor-pointer text-left';
   card.innerHTML = `
-    <img src="${p.src}" alt="${p.caption}" loading="lazy" class="w-full h-full object-cover"/>
-    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+    <img src="${p.src}" alt="${p.caption || 'Fotoğraf'}" loading="lazy" class="w-full h-full object-cover"/>
+    ${p.caption ? `<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
       <div class="font-label-bold text-label-bold text-on-surface uppercase tracking-wider">${p.caption}</div>
-    </div>
+    </div>` : ''}
     <div class="absolute top-3 right-3 bg-surface-container-lowest/80 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity">
       <span class="material-symbols-outlined text-primary text-[18px]">zoom_in</span>
     </div>`;
@@ -198,8 +198,9 @@ let lbIndex = 0;
 function openLightbox(i) {
   lbIndex = i;
   lbImg.src = photos[i].src;
-  lbImg.alt = photos[i].caption;
+  lbImg.alt = photos[i].caption || 'Fotoğraf';
   lbCap.textContent = photos[i].caption;
+  lbCap.style.display = photos[i].caption ? '' : 'none';
   lb.classList.remove('hidden');
   lb.classList.add('flex');
   document.body.style.overflow = 'hidden';
