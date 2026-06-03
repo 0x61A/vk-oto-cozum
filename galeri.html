@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galeri - VK OTO ÇÖZÜM | Atölye & Çalışma Fotoğrafları</title>
+<meta name="description" content="VK OTO ÇÖZÜM atölyemizden fotoğraflar ve dükkan tanıtım videosu. Sincan / Ankara."/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Roboto+Flex:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: { extend: {
+      colors: {
+        "surface-bright": "#393939", "primary": "#e53935", "on-primary": "#ffffff",
+        "surface-container-highest": "#353534", "on-background": "#e5e2e1",
+        "secondary": "#ffdf9e", "on-surface": "#e5e2e1", "background": "#131313",
+        "surface-dim": "#131313", "tertiary-container": "#909191",
+        "surface-container-low": "#1c1b1b", "surface": "#131313",
+        "secondary-container": "#fabd00", "primary-container": "#b71c1c",
+        "surface-container-high": "#2a2a2a", "primary-fixed-dim": "#e53935",
+        "on-surface-variant": "#e4beb9", "surface-container": "#201f1f",
+        "surface-tint": "#e53935", "surface-variant": "#353534",
+        "tertiary": "#c6c6c7", "on-secondary-container": "#6a4e00",
+        "on-tertiary": "#2f3131", "surface-container-lowest": "#0e0e0e",
+        "on-primary-container": "#ffffff", "on-secondary": "#3f2e00"
+      },
+      borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" },
+      spacing: { "margin-mobile": "16px", "gutter": "24px", "base": "8px", "section-gap": "80px", "margin-desktop": "64px" },
+      fontFamily: { "body-lg":["Roboto Flex"], "display-lg":["Oswald"], "label-bold":["Oswald"], "headline-lg":["Oswald"], "title-md":["Oswald"], "headline-lg-mobile":["Oswald"], "body-md":["Roboto Flex"] },
+      fontSize: {
+        "body-lg": ["18px",{lineHeight:"28px",fontWeight:"400"}],
+        "display-lg": ["48px",{lineHeight:"56px",fontWeight:"700"}],
+        "label-bold": ["14px",{lineHeight:"20px",letterSpacing:"0.1em",fontWeight:"600"}],
+        "headline-lg": ["32px",{lineHeight:"40px",fontWeight:"600"}],
+        "title-md": ["20px",{lineHeight:"28px",letterSpacing:"0.05em",fontWeight:"500"}],
+        "headline-lg-mobile": ["28px",{lineHeight:"36px",fontWeight:"600"}],
+        "body-md": ["16px",{lineHeight:"24px",fontWeight:"400"}]
+      }
+    }}
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .gallery-item { transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease; }
+  .gallery-item:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 10px 30px -10px rgba(229,57,53,0.25); }
+  .gallery-item img { transition: transform .6s ease; }
+  .gallery-item:hover img { transform: scale(1.08); }
+  #lightbox { backdrop-filter: blur(8px); }
+  #lightbox.hidden { display: none; }
+  .scroll-reveal { opacity: 0; transform: translateY(20px); transition: all .6s ease-out; }
+  .scroll-reveal.revealed { opacity: 1; transform: translateY(0); }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #131313; }
+  ::-webkit-scrollbar-thumb { background: #353534; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #e53935; }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pt-20 overflow-x-hidden">
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-surface-container-highest bg-background/95 backdrop-blur-sm transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
+<a class="font-display-lg text-2xl md:text-3xl font-bold tracking-tight text-primary leading-none uppercase hover:opacity-80 transition-opacity whitespace-nowrap" href="index.html">VK OTO ÇÖZÜM</a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-on-surface font-medium font-label-bold text-label-bold hover:text-secondary-container transition-colors duration-200 pb-1" href="index.html">Ana Sayfa</a>
+<a class="text-on-surface font-medium font-label-bold text-label-bold hover:text-secondary-container transition-colors duration-200 pb-1" href="hizmetler.html">Hizmetler</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-bold text-label-bold" href="galeri.html">Galeri</a>
+<a class="text-on-surface font-medium font-label-bold text-label-bold hover:text-secondary-container transition-colors duration-200 pb-1" href="iletisim.html">İletişim</a>
+</div>
+<a href="https://wa.me/905462436828" target="_blank" rel="noopener" class="hidden md:flex items-center bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 rounded uppercase hover:bg-primary-container hover:scale-105 active:scale-95 transition-all shadow-sm">Randevu Al</a>
+<button id="mobile-menu-btn" aria-label="Menü" class="md:hidden text-primary p-2 hover:bg-surface-variant rounded-full transition-colors">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="hidden md:hidden border-t border-surface-container-highest bg-background/95 backdrop-blur-sm px-margin-mobile py-4 flex flex-col gap-4">
+<a class="text-on-surface font-label-bold text-label-bold" href="index.html">Ana Sayfa</a>
+<a class="text-on-surface font-label-bold text-label-bold" href="hizmetler.html">Hizmetler</a>
+<a class="text-primary font-bold font-label-bold text-label-bold" href="galeri.html">Galeri</a>
+<a class="text-on-surface font-label-bold text-label-bold" href="iletisim.html">İletişim</a>
+<a class="bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 rounded uppercase text-center" href="https://wa.me/905462436828" target="_blank" rel="noopener">Randevu Al</a>
+</div>
+</nav>
+
+<!-- Hero -->
+<header class="relative w-full border-b border-surface-container-highest bg-surface-container-lowest overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image:url('assets/images/dukkan-bmw-on.jpg');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/50"></div>
+<div class="relative z-10 max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container border border-primary rounded mb-6">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-bold text-label-bold text-primary tracking-widest uppercase">Atölye & Çalışmalarımız</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-[64px] md:leading-[72px] text-on-background uppercase tracking-tight mb-4">
+Atölyemizden <span class="text-primary">Görüntüler</span>
+</h1>
+<p class="font-body-lg text-body-lg text-tertiary max-w-2xl">
+Sincan'daki dükkanımız, profesyonel ekipmanlarımız ve gerçekleştirdiğimiz çalışmalardan kareler. Ekipmanların yakından görünümü için fotoğrafa dokunun.
+</p>
+</div>
+</header>
+
+<!-- Video Bölümü -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto py-section-gap">
+<div class="mb-8 border-l-4 border-primary pl-4 scroll-reveal">
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-background tracking-tight">Dükkan Tanıtım</h2>
+<p class="font-body-md text-body-md text-tertiary mt-2">Atölyemizden kısa bir tanıtım videosu.</p>
+</div>
+<div class="relative w-full aspect-video rounded overflow-hidden border border-surface-container-highest bg-surface-container shadow-2xl scroll-reveal">
+<video src="assets/video/dukkan-tanitim.mp4" controls playsinline preload="metadata" class="w-full h-full object-contain bg-black"></video>
+</div>
+</section>
+
+<!-- Foto Galeri -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto pb-section-gap">
+<div class="mb-8 border-l-4 border-primary pl-4 scroll-reveal">
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-background tracking-tight">Fotoğraflar</h2>
+<p class="font-body-md text-body-md text-tertiary mt-2">Dükkan, ekipmanlar ve servisteki araçlar.</p>
+</div>
+<div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Foto kartları JS ile doldurulacak -->
+</div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="hidden fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4">
+<button id="lb-close" aria-label="Kapat" class="absolute top-4 right-4 z-10 bg-surface-container-highest text-on-surface rounded-full p-3 hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<button id="lb-prev" aria-label="Önceki" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-surface-container-highest text-on-surface rounded-full p-3 hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button id="lb-next" aria-label="Sonraki" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-surface-container-highest text-on-surface rounded-full p-3 hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<img id="lb-img" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded"/>
+<div id="lb-caption" class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-surface-container-lowest/80 backdrop-blur-sm px-4 py-2 rounded text-on-surface font-label-bold text-label-bold uppercase tracking-wider"></div>
+</div>
+
+<!-- WhatsApp FAB -->
+<div class="fixed bottom-8 right-8 z-50">
+<a class="flex items-center gap-3 bg-secondary-container text-on-secondary-container rounded-full p-4 shadow-lg hover:scale-110 active:scale-95 transition-all" href="https://wa.me/905462436828" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+<span class="hidden md:inline-block font-label-bold text-label-bold pr-2">WhatsApp</span>
+</a>
+</div>
+
+<!-- Footer -->
+<footer class="w-full border-t border-surface-container-highest bg-surface-container-lowest mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center py-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-screen-2xl mx-auto gap-8">
+<div class="font-display-lg text-3xl md:text-display-lg text-on-surface font-bold tracking-tight uppercase">VK OTO ÇÖZÜM</div>
+<div class="flex flex-wrap justify-center gap-6 md:space-x-8">
+<a class="text-tertiary font-label-bold text-label-bold hover:text-primary transition-all uppercase tracking-wider" href="hizmetler.html">Hizmetler</a>
+<a class="text-tertiary font-label-bold text-label-bold hover:text-primary transition-all uppercase tracking-wider" href="iletisim.html">İletişim</a>
+<a class="text-tertiary font-label-bold text-label-bold hover:text-primary transition-all uppercase tracking-wider" href="tel:+905462436828">0546 243 68 28</a>
+</div>
+<div class="text-tertiary font-body-md text-body-md text-center md:text-right">
+© 2025 VK OTO ÇÖZÜM. Tüm Hakları Saklıdır.<br/>
+Ahi Evran Mah. Sehaş Arena E-Blok No:7, Sincan / ANKARA
+</div>
+</div>
+</footer>
+
+<script>
+const photos = [
+  { src: "assets/images/dukkan-passat-on.jpg",    caption: "Dükkan Önü – Passat" },
+  { src: "assets/images/dukkan-passat-arka.jpg",  caption: "Dükkan Girişi – E-Blok No:7" },
+  { src: "assets/images/dukkan-bmw-on.jpg",       caption: "Atölye – Servis Bekleyen BMW" },
+  { src: "assets/images/dukkan-bmw-arka.jpg",     caption: "Atölye İç Görünüm" },
+  { src: "assets/images/klima-gazi-vw.jpg",       caption: "Klima Gazı Dolumu – VW" },
+  { src: "assets/images/ekipmanlar-katalog.jpg",  caption: "Profesyonel Ekipmanlarımız" },
+  { src: "assets/images/kartvizit-on.jpg",        caption: "Kartvizit – Hizmetlerimiz" },
+  { src: "assets/images/kartvizit-arka.jpg",      caption: "Kartvizit – Klima & Kalorifer" }
+];
+
+const grid = document.getElementById('gallery-grid');
+photos.forEach((p, i) => {
+  const card = document.createElement('button');
+  card.className = 'gallery-item group relative block w-full aspect-[4/3] overflow-hidden rounded border border-surface-container-highest bg-surface-container cursor-pointer text-left';
+  card.innerHTML = `
+    <img src="${p.src}" alt="${p.caption}" loading="lazy" class="w-full h-full object-cover"/>
+    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+      <div class="font-label-bold text-label-bold text-on-surface uppercase tracking-wider">${p.caption}</div>
+    </div>
+    <div class="absolute top-3 right-3 bg-surface-container-lowest/80 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+      <span class="material-symbols-outlined text-primary text-[18px]">zoom_in</span>
+    </div>`;
+  card.addEventListener('click', () => openLightbox(i));
+  grid.appendChild(card);
+});
+
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lb-img');
+const lbCap = document.getElementById('lb-caption');
+let lbIndex = 0;
+
+function openLightbox(i) {
+  lbIndex = i;
+  lbImg.src = photos[i].src;
+  lbImg.alt = photos[i].caption;
+  lbCap.textContent = photos[i].caption;
+  lb.classList.remove('hidden');
+  lb.classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  lb.classList.add('hidden');
+  lb.classList.remove('flex');
+  document.body.style.overflow = '';
+}
+function nextPhoto() { openLightbox((lbIndex + 1) % photos.length); }
+function prevPhoto() { openLightbox((lbIndex - 1 + photos.length) % photos.length); }
+
+document.getElementById('lb-close').addEventListener('click', closeLightbox);
+document.getElementById('lb-next').addEventListener('click', nextPhoto);
+document.getElementById('lb-prev').addEventListener('click', prevPhoto);
+lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+document.addEventListener('keydown', e => {
+  if (lb.classList.contains('hidden')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') nextPhoto();
+  if (e.key === 'ArrowLeft') prevPhoto();
+});
+
+// Scroll reveal
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.scroll-reveal').forEach(el => io.observe(el));
+
+// Mobil menü
+document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+</script>
+</body></html>

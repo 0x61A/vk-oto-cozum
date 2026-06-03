@@ -8,5 +8,6 @@
 # Bağımlılıklar / derleme
 node_modules/
 
-# Ham kaynak görseller (repoya dahil edilmez)
+# Ham kaynak görseller (assets/ altındaki adlandırılmış kopyalar deploy edilir)
 WhatsApp Image*.jpeg
+WhatsApp Video*.mp4
