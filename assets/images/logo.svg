@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="title desc">
+  <title id="title">VK OTO ÇÖZÜM logosu</title>
+  <desc id="desc">Koyu zemin üzerinde kırmızı VK harflerinden oluşan logo</desc>
+  <rect width="512" height="512" rx="80" fill="#131313"/>
+  <text x="256" y="274" dominant-baseline="middle" text-anchor="middle"
+        font-family="Oswald, Arial, sans-serif" font-weight="700" font-size="224"
+        fill="#e53935" letter-spacing="-10">VK</text>
+</svg>
