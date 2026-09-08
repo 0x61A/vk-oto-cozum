@@ -19,7 +19,7 @@ Google Ads Anahtar Kelime Planlayıcı ve Google Search Console hesabına erişi
 | 1 | sincan araç yazılım, sincan ecu yazılım, araç yazılım sincan | Çok yüksek | `/sincan-arac-yazilim` | Yerel ve doğrudan randevu niyetli ana küme |
 | 1 | sincan stage 1 yazılım, stage 1 sincan, ankara stage 1 yazılım | Çok yüksek | `/sincan-arac-yazilim` | En değerli performans işlemi; güven ve araç uygunluğu içeriği gerekir |
 | 1 | ankara araç yazılım, ankara chip tuning, ecu tuning ankara | Yüksek | `/sincan-arac-yazilim` | Talep sinyali daha güçlü, rekabet daha yüksek |
-| 1 | sincan dpf temizliği, dpf arızası sincan, dpf rejenerasyon ankara | Çok yüksek | `/hizmetler/dpf` | Arızası olan müşteri hızlı çözüm arar |
+| 1 | dpf arızası sincan, dpf yazılım çözümü ankara, dpf uyarısı | Çok yüksek | `/hizmetler/dpf` | Yalnızca elektronik teşhis ve yazılım hizmeti; temizlik hedeflenmez |
 | 1 | sincan adblue arızası, adblue tamiri ankara, scr arızası | Çok yüksek | `/hizmetler/adblue` | Acil ve dönüşüme yakın sorgular |
 | 1 | sincan egr temizliği, egr valfi arızası, egr arızası ankara | Çok yüksek | `/hizmetler/egr` | Arıza + hizmet niyeti güçlü |
 | 1 | sincan bilgisayarlı arıza tespit, motor arıza lambası sincan, dtc arıza kodu | Çok yüksek | `/hizmetler/dtc-ariza-kodu` | “Kod silme” yerine teşhis ve kök neden vurgusu güven verir |
@@ -38,7 +38,7 @@ Bir arama niyeti için bir ana sayfa kullanılacak. Aynı kelimeyi bütün sayfa
 
 - Ana sayfa: Sincan oto servis ve genel marka güveni
 - Yazılım sayfası: Sincan araç yazılımı, Stage 1, ECU/TCU, Ankara chip tuning
-- DPF sayfası: DPF arızası, doluluk ölçümü, temizlik ve rejenerasyon
+- DPF sayfası: DPF arıza tespiti, canlı veri kontrolü ve yazılım değerlendirmesi
 - EGR sayfası: EGR valfi arızası, teşhis ve temizlik
 - AdBlue sayfası: AdBlue/SCR arıza tespiti ve onarım seçenekleri
 - DTC sayfası: Bilgisayarlı arıza tespiti, motor arıza lambası ve arıza kodu
@@ -55,7 +55,7 @@ Bu konular metne doğal biçimde ve SSS başlıklarında yer almalı:
 - Orijinal araç yazılımı yedekleniyor mu?
 - TCU ve DSG yazılımı ne işe yarar?
 - DPF dolu uyarısı neden yanar?
-- DPF temizliği mi rejenerasyon mu gerekir?
+- DPF arızası fiziksel mi, elektronik mi nasıl anlaşılır?
 - AdBlue geri sayımı neden başlar?
 - EGR valfi tıkanınca hangi belirtiler görülür?
 - Motor arıza lambası neden tekrar yanar?

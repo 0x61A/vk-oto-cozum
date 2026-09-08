@@ -120,7 +120,7 @@ class SiteSeoTests(unittest.TestCase):
         expected = {
             ROOT / "index.html": "Sincan Oto Servis",
             ROOT / "sincan-arac-yazilim.html": "Sincan Araç Yazılımı",
-            ROOT / "hizmetler" / "dpf" / "index.html": "Sincan DPF Temizliği",
+            ROOT / "hizmetler" / "dpf" / "index.html": "Sincan DPF Arıza Tespiti",
             ROOT / "hizmetler" / "egr" / "index.html": "Sincan EGR Valfi",
             ROOT / "hizmetler" / "adblue" / "index.html": "Sincan AdBlue Arızası",
             ROOT / "hizmetler" / "dtc-ariza-kodu" / "index.html": "Sincan Bilgisayarlı Arıza Tespiti",
