@@ -104,6 +104,7 @@ address { font-style: normal; color: var(--muted); }
 .gallery-link { color: var(--muted); font-size: .9375rem; }
 .site-footer { border-top: 1px solid var(--line); color: var(--muted); padding: 1.75rem 0; font-size: .875rem; }
 .footer-inner, .site-footer nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 1.5rem; }
+.footer-credit { opacity: .7; }
 .mobile-contact { display: none; }
 @media (max-width: 1050px) {
   .hero-grid { gap: 2rem; }
