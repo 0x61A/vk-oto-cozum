@@ -94,14 +94,18 @@ class LandingPageTests(unittest.TestCase):
         self.assertEqual(set(a for a, _ in pairs), {"phone", "whatsapp", "directions"})
         self.assertEqual([location for action, location in pairs if action == "phone"], ["contact"])
 
-    def test_no_active_marketing_scripts_or_forms(self):
-        self.assertEqual(len(self.doc.scripts), 2)
+    def test_google_ads_tracking_and_no_forms(self):
+        self.assertEqual(len(self.doc.scripts), 3)
         self.assertEqual(self.doc.scripts[0]["attrs"].get("type"), "application/ld+json")
-        self.assertEqual(self.doc.scripts[1]["attrs"].get("src"), "/assets/js/software-menu.js")
+        self.assertEqual(self.doc.scripts[1]["attrs"].get("src"), "/assets/js/google-ads.js")
+        self.assertIn("defer", self.doc.scripts[1]["attrs"])
+        self.assertEqual(self.doc.scripts[2]["attrs"].get("src"), "/assets/js/software-menu.js")
         menu_source = (ROOT / "assets/js/software-menu.js").read_text(encoding="utf-8")
+        ads_source = (ROOT / "assets/js/google-ads.js").read_text(encoding="utf-8")
         self.assertFalse(self.doc.tags("form"))
-        for term in ("googletagmanager", "connect.facebook.net", "fbq(", "gtag(", "localStorage", "sessionStorage"):
-            self.assertNotIn(term, self.source + menu_source)
+        self.assertIn("AW-789474599", ads_source)
+        for term in ("connect.facebook.net", "fbq(", "localStorage", "sessionStorage"):
+            self.assertNotIn(term, self.source + menu_source + ads_source)
 
     def test_structured_data_and_hours(self):
         graph = json.loads(self.doc.scripts[0]["content"])["@graph"]
